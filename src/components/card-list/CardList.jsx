@@ -7,7 +7,7 @@ const CardList = (props) => {
   const {monsters} = props;
   return ( 
   <div className="card-list">
-    {monsters && monsters.map(monster => 
+    {monsters.map(monster => 
       <Card key={monster.id} monster={monster}/>
     )}
   </div>
