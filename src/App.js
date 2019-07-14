@@ -28,8 +28,8 @@ class App extends Component {
       )
     return(
     <div className="App">
-      <SearchBar placeholder="search monsters" handleChange={e =>this.setState({searchField:e.target.value})}/>
-     <CardList monsters={filteredMonsters}/>
+      <SearchBar className="search" placeholder="search monsters" handleChange={e =>this.setState({searchField:e.target.value})}/>
+     <CardList className="card-list" monsters={filteredMonsters}/>
     </div>
     )
   }

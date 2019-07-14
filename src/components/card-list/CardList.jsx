@@ -4,11 +4,11 @@ import Card from '../card/Card'
 import React from 'react';
 
 const CardList = (props) => {
-  const {monsters} = props;
+  const {monsters, className} = props;
   return ( 
-  <div className="card-list">
+  <div className={className}>
     {monsters.map(monster => 
-      <Card key={monster.id} monster={monster}/>
+      <Card className="card-container" key={monster.id} monster={monster}/>
     )}
   </div>
   )
