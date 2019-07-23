@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css';
 
 import React, {Component}from 'react';
 
@@ -14,6 +15,9 @@ class App extends Component {
       searchField: ''
     }
   }
+  handleChange=(e) => {
+    this.setState({searchField:e.target.value})
+  }
 
  componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -28,7 +32,8 @@ class App extends Component {
       )
     return(
     <div className="App">
-      <SearchBar className="search" placeholder="search monsters" handleChange={e =>this.setState({searchField:e.target.value})}/>
+      <h1>monsters rolodex</h1>
+      <SearchBar className="search" placeholder="search monsters" handleChange={this.handleChange}/>
      <CardList className="card-list" monsters={filteredMonsters}/>
     </div>
     )
