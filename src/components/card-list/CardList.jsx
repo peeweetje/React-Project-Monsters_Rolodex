@@ -5,6 +5,9 @@ import React from 'react';
 
 const CardList = (props) => {
   const {monsters, className} = props;
+ 
+console.log({props})
+console.log({monsters})
   return ( 
   <div className={className}>
     {monsters.map(monster => 
